@@ -4,7 +4,7 @@ public class Plateau {
 	
 	static int nbLignes; 
 	static int nbColonnes; 
-	 Case  [][]  jeu ;
+	static Case  [][]  jeu ;
 	
 	Plateau (int n , int p){
 		int i,j;
