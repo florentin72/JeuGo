@@ -15,6 +15,8 @@ public class Plateau {
 			for ( j=0 ; j<nbColonnes; j++) {
 				
 				jeu[i][j]= new Case();
+				jeu[i][j].posX = i;
+				jeu[i][j].posY = j;
 				jeu[i][j].val = " - ";
 				
 			}

@@ -5,11 +5,16 @@ public class Joueur {
 	
 	String couleur;
 	Plateau plateau;
+	int nbPierrreCapture;
+	int score;
+	boolean passerTour;
 	Joueur(String c , Plateau p){
 		
 		couleur = c;
-		
-		
+		plateau = p;
+		nbPierrreCapture = 0;
+		score = 0;
+		passerTour = false;
 	}
 	
 	void placerPierre(int x , int y ) {
@@ -47,4 +52,9 @@ public class Joueur {
 		
 	}
 
+	
+	void passerTour () {
+		
+		passerTour = true;
+	}
 }
