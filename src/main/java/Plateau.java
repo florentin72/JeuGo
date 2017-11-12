@@ -4,20 +4,21 @@ public class Plateau {
 	
 	static int nbLignes; 
 	static int nbColonnes; 
-	static Case  [][]  jeu ;
+	static Pierre  [][]  jeu ;
 	
 	Plateau (int n , int p){
 		int i,j;
 		nbLignes = n;
 		nbColonnes = p;
-		jeu =  new Case [nbLignes][nbColonnes] ;
+		jeu =  new Pierre [nbLignes][nbColonnes] ;
 		for ( i =0 ; i< nbLignes ; i++) {
 			for ( j=0 ; j<nbColonnes; j++) {
 				
-				jeu[i][j]= new Case();
+				jeu[i][j]= new Pierre();
 				jeu[i][j].posX = i;
 				jeu[i][j].posY = j;
-				jeu[i][j].val = " - ";
+				
+				jeu[i][j].couleur = " - ";
 				
 			}
 			
@@ -34,7 +35,7 @@ public class Plateau {
 			
 			for (j=0;j<nbColonnes;j++) {
 				
-				System.out.print(jeu[i][j].val );
+				System.out.print(jeu[i][j].couleur );
 				
 			}
 			System.out.println();

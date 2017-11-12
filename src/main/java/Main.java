@@ -10,16 +10,13 @@ public class Main {
 		System.out.println("\n \n \n");
 		plateau.affiche();
 		
-		blanc.placerPierre(0, 3);
+		blanc.placerPierre(2, 3);
 		System.out.println("\n \n \n");
 		plateau.affiche();
 		
-		blanc.placerPierre(9, 9);
-		System.out.println("\n \n \n");
-		plateau.affiche();
 		
-		blanc.placerPierre(9, 10);
-		System.out.println("\n \n \n");
-		plateau.affiche();
+	//	Plateau.jeu[2][3].detecterVoisin();
+		//System.out.println(plateau.jeu[2][3].haut.position.posX);
+		
 	}
 }

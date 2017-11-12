@@ -19,18 +19,18 @@ public class Joueur {
 	
 	void placerPierre(int x , int y ) {
 		if (x<= Plateau.nbLignes && y < Plateau.nbColonnes){
-		if (Plateau.jeu[x][y].val.equals(" - ")) {
+		if (Plateau.jeu[x][y].couleur.equals(" - ")) {
 			
 			
 			if (couleur.equals("Blanc")) {
 				
-				Plateau.jeu[x][y].val = "B";
+				Plateau.jeu[x][y].couleur = " B ";
 				
 			}
 			
 			if (couleur.equals("Noir")) {
 				
-				Plateau.jeu[x][y].val = "N";
+				Plateau.jeu[x][y].couleur = " N ";
 				
 			}
 			

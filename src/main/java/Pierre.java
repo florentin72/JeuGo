@@ -2,18 +2,21 @@
 public class Pierre {
 	
 	String couleur;
-	Case position;
-	Pierre gauche,droite,haut,bas;
+
+	 int posX;
+	 int posY;
+	 Plateau plateau;
 	
 	
-	
-	void detecterVoisin () {
+	public String toString () {
 		
-		
-		
+		return ("La pierre est en "+ posX + ", " + posY);
 		
 	}
 	
+	
+	
+
 	
 	
 	

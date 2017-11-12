@@ -11,8 +11,11 @@ public class JoueurTest {
 
 	@Test
 	public void testPlacerPierre() {
-		fail("Not yet implemented");
-	}
+	
+			Plateau p = new Plateau (10, 10);
+			Joueur j = new Joueur("Blanc", p);
+			
+	}	
 
 	@Test
 	public void testPasserTour() {
