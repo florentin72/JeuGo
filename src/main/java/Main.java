@@ -15,8 +15,8 @@ public class Main {
 		plateau.affiche();
 		
 		
-	//	Plateau.jeu[2][3].detecterVoisin();
-		//System.out.println(plateau.jeu[2][3].haut.position.posX);
+		Plateau.jeu[2][3].detecterVoisin();
+		System.out.println(Plateau.jeu[2][3].haut);
 		
 	}
 }
