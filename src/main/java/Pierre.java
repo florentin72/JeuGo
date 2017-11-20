@@ -1,10 +1,9 @@
 
 public class Pierre {
 	
-	String couleur; /* 3 possiblitee : B , N , -*/
-
-	 int posX;
-	 int posY;
+	String couleur;  /* enumeration */ 
+	private int posX;
+	private int posY;
 	 
 	 Pierre haut,bas,gauche,droite;
 	 
@@ -20,7 +19,7 @@ public class Pierre {
 	
 	public String toString () {
 		
-		return ("La pierre est en "+ posX + ", " + posY);
+		return ("La pierre est en "+ getPosX() + ", " + getPosY());
 		
 	}
 	
@@ -32,27 +31,51 @@ public class Pierre {
 		this.droite = new Pierre();
 		this.gauche = new Pierre ();
 		
-		if (posX == 0) {
+		if (getPosX() == 0) {
 			
 			haut = null;
 			
 		}
-		if (posY == 0 ) {
+		if (getPosY() == 0 ) {
 			
 			this.gauche = null;
 		}
-		if (posY == Plateau.nbColonnes-1 )
+		if (getPosY() == Plateau.nbColonnes-1 )
 			
-		if (!Plateau.jeu[posX][posY].couleur.equals(" - ")) {
+		if (!Plateau.jeu[getPosX()][getPosY()].couleur.equals(" - ")) {
 
-			haut.posX = posX-1; 
-			haut.posY = posY; 
-			haut.couleur = Plateau.jeu[posX-1][posY].couleur ;
+			haut.setPosX(getPosX()-1); 
+			haut.setPosY(posY); 
+			haut.couleur = Plateau.jeu[getPosX()-1][getPosY()].couleur ;
 		
 		}
 		
 		 
 		
+	}
+
+
+
+	public int getPosX() {
+		return posX;
+	}
+
+
+
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+
+
+	public int getPosY() {
+		return posY;
+	}
+
+
+
+	public void setPosY(int posY) {
+		this.posY = posY;
 	}
 
 	

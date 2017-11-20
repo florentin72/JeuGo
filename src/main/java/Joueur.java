@@ -3,18 +3,24 @@
 public class Joueur {
 	
 	
-	String couleur;
-	Plateau plateau;
-	int nbPierrreCapture;
-	int score;
-	boolean passerTour;
-	Joueur(String c , Plateau p){
+	 private String couleur;
+	 Plateau plateau;
+	 private int nbPierrreCapture;
+	 private int score;
+	 private boolean passerTour;
+	 /* nombre de pierre capturer*/
+	 private int nbPrisonnier;
+	 private String pseudo;
+	 
+	 
+	 Joueur(String c , Plateau p , String pseud){
+		this.pseudo = pseud;
 		
 		couleur = c;
 		plateau = p;
-		nbPierrreCapture = 0;
-		score = 0;
-		passerTour = false;
+		setNbPierrreCapture(0);
+		setScore(0);
+		setPasserTour(false);
 	}
 	
 	void placerPierre(int x , int y ) {
@@ -55,6 +61,46 @@ public class Joueur {
 	
 	void passerTour () {
 		
-		passerTour = true;
+		setPasserTour(true);
+	}
+
+	public boolean isPasserTour() {
+		return passerTour;
+	}
+
+	public void setPasserTour(boolean passerTour) {
+		this.passerTour = passerTour;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public int getNbPierrreCapture() {
+		return nbPierrreCapture;
+	}
+
+	public void setNbPierrreCapture(int nbPierrreCapture) {
+		this.nbPierrreCapture = nbPierrreCapture;
+	}
+
+	public int getNbPrisonnier() {
+		return nbPrisonnier;
+	}
+
+	public void setNbPrisonnier(int nbPrisonnier) {
+		this.nbPrisonnier = nbPrisonnier;
+	}
+
+	public String getPseudo() {
+		return pseudo;
+	}
+
+	public void setPseudo(String pseudo) {
+		this.pseudo = pseudo;
 	}
 }

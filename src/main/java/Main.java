@@ -5,7 +5,7 @@ public class Main {
 		
 		Plateau plateau = new Plateau (10,10);
 		plateau.affiche();
-		Joueur blanc = new Joueur("Blanc", plateau);
+		Joueur blanc = new Joueur("Blanc", plateau, "Flo");
 		blanc.placerPierre(3, 3);
 		System.out.println("\n \n \n");
 		plateau.affiche();

@@ -13,7 +13,7 @@ public class JoueurTest {
 	public void testPlacerPierre() {
 	
 			Plateau p = new Plateau (10, 10);
-			Joueur j = new Joueur("Blanc", p);
+	
 			
 	}	
 
