@@ -1,3 +1,5 @@
+import exception.ExceptionPlacerPierre;
+
 // class des joueurs 
 
 public class Joueur {
@@ -23,9 +25,9 @@ public class Joueur {
 		setPasserTour(false);
 	}
 	
-	void placerPierre(int x , int y ) {
+	void placerPierre(int x , int y ) throws ExceptionPlacerPierre {
 		if (x<= Plateau.nbLignes && y < Plateau.nbColonnes){
-		if (Plateau.jeu[x][y].getCouleur().equals(" - ")) {
+			if (Plateau.jeu[x][y].getCouleur().equals(" - ")) {
 			
 			
 			if (couleur.equals("Blanc")) {
@@ -45,13 +47,16 @@ public class Joueur {
 		}
 		
 		else {
-			System.out.println("Place deja prise ");
+			//System.out.println("Place deja prise ");
+			throw new ExceptionPlacerPierre (41);
 		}
 		
 		}
 		else {
 			
-			System.out.println("Coordonnees hors du plateau");
+			
+			throw new ExceptionPlacerPierre ();
+			//System.out.println("Coordonnees hors du plateau");
 		}
 		
 

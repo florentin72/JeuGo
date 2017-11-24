@@ -1,8 +1,9 @@
+import exception.ExceptionPlacerPierre;
 import sauvegarde.Serialisation;
 
 public class Main {
 
-	public static void main (String args []) {
+	public static void main (String args []) throws ExceptionPlacerPierre {
 		
 		Plateau plateau = new Plateau (10,10);
 		plateau.affiche();
@@ -11,7 +12,7 @@ public class Main {
 		System.out.println("\n \n \n");
 		plateau.affiche();
 		
-		blanc.placerPierre(2, 3);
+		blanc.placerPierre(3, 3);
 		System.out.println("\n \n \n");
 		plateau.affiche();
 		
@@ -24,7 +25,11 @@ public class Main {
 		pierre.setCouleur("Blanc");
 		 try {
 	           
-	            Serialisation.encodeToFile(pierre, "sauvegarde.xml");
+	           Serialisation.encodeToFile(pierre, "sauvegarde.xml");
+	           System.out.println(pierre);
+	            
+	            pierre = (Pierre) Serialisation.decodeFromFile("sauvegarde.xml");
+	            System.out.println(pierre);
 	         
 	        } catch(Exception e) {
 	            e.printStackTrace();
