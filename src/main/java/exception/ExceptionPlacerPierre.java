@@ -6,7 +6,7 @@ public class ExceptionPlacerPierre extends Exception {
 	public ExceptionPlacerPierre (){
 		
 		
-		System.out.println(" La pierre est hors du plateau ");
+		System.out.println("La pierre est hors du plateau");
 		
 		
 	}
