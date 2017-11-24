@@ -4,7 +4,7 @@ public class Joueur {
 	
 	
 	 private String couleur;
-	 Plateau plateau;
+	
 	 private int nbPierrreCapture;
 	 private int score;
 	 private boolean passerTour;
@@ -13,11 +13,11 @@ public class Joueur {
 	 private String pseudo;
 	 
 	 
-	 Joueur(String c , Plateau p , String pseud){
+	public Joueur(String c , Plateau p , String pseud){
 		this.pseudo = pseud;
 		
 		couleur = c;
-		plateau = p;
+	
 		setNbPierrreCapture(0);
 		setScore(0);
 		setPasserTour(false);
@@ -25,18 +25,18 @@ public class Joueur {
 	
 	void placerPierre(int x , int y ) {
 		if (x<= Plateau.nbLignes && y < Plateau.nbColonnes){
-		if (Plateau.jeu[x][y].couleur.equals(" - ")) {
+		if (Plateau.jeu[x][y].getCouleur().equals(" - ")) {
 			
 			
 			if (couleur.equals("Blanc")) {
 				
-				Plateau.jeu[x][y].couleur = " B ";
+				Plateau.jeu[x][y].setCouleur(" B ");
 				
 			}
 			
 			if (couleur.equals("Noir")) {
 				
-				Plateau.jeu[x][y].couleur = " N ";
+				Plateau.jeu[x][y].setCouleur(" N ");
 				
 			}
 			

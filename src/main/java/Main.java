@@ -1,3 +1,4 @@
+import sauvegarde.Serialisation;
 
 public class Main {
 
@@ -17,6 +18,18 @@ public class Main {
 		
 		Plateau.jeu[2][3].detecterVoisin();
 		System.out.println(Plateau.jeu[2][3].haut);
+		Pierre pierre = new Pierre ();
+		pierre.setPosX(10);
+		pierre.setPosY(7);
+		pierre.setCouleur("Blanc");
+		 try {
+	           
+	            Serialisation.encodeToFile(pierre, "sauvegarde.xml");
+	         
+	        } catch(Exception e) {
+	            e.printStackTrace();
+	        }
+		
 		
 	}
 }

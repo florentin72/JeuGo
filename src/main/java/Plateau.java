@@ -6,7 +6,7 @@ public class Plateau {
 	static int nbColonnes; 
 	static Pierre  [][]  jeu ;
 	
-	Plateau (int n , int p){
+	public Plateau (int n , int p){
 		int i,j;
 		nbLignes = n;
 		nbColonnes = p;
@@ -18,7 +18,7 @@ public class Plateau {
 				jeu[i][j].setPosX(i);
 				jeu[i][j].setPosY(j);
 				
-				jeu[i][j].couleur = " - ";
+				jeu[i][j].setCouleur(" - ");
 				
 			}
 			
@@ -35,7 +35,7 @@ public class Plateau {
 			
 			for (j=0;j<nbColonnes;j++) {
 				
-				System.out.print(jeu[i][j].couleur );
+				System.out.print(jeu[i][j].getCouleur() );
 				
 			}
 			System.out.println();

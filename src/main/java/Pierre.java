@@ -1,14 +1,14 @@
 
 public class Pierre {
 	
-	String couleur;  /* enumeration */ 
+	private String couleur;  /* enumeration */ 
 	private int posX;
 	private int posY;
 	 
 	 Pierre haut,bas,gauche,droite;
 	 
 	 
-	 Pierre(){
+	 public Pierre(){
 		 
 		
 		 
@@ -42,11 +42,11 @@ public class Pierre {
 		}
 		if (getPosY() == Plateau.nbColonnes-1 )
 			
-		if (!Plateau.jeu[getPosX()][getPosY()].couleur.equals(" - ")) {
+		if (!Plateau.jeu[getPosX()][getPosY()].getCouleur().equals(" - ")) {
 
 			haut.setPosX(getPosX()-1); 
 			haut.setPosY(posY); 
-			haut.couleur = Plateau.jeu[getPosX()-1][getPosY()].couleur ;
+			haut.setCouleur(Plateau.jeu[getPosX()-1][getPosY()].getCouleur()) ;
 		
 		}
 		
@@ -76,6 +76,18 @@ public class Pierre {
 
 	public void setPosY(int posY) {
 		this.posY = posY;
+	}
+
+
+
+	public String getCouleur() {
+		return couleur;
+	}
+
+
+
+	public void setCouleur(String couleur) {
+		this.couleur = couleur;
 	}
 
 	
