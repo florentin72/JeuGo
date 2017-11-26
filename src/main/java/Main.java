@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 import exception.ExceptionPlacerPierre;
 import sauvegarde.Serialisation;
 
@@ -7,33 +9,38 @@ public class Main {
 		
 		Plateau plateau = new Plateau (10,10);
 		plateau.affiche();
-		Joueur blanc = new Joueur("Blanc", plateau, "Flo");
-		blanc.placerPierre(3, 3);
-		System.out.println("\n \n \n");
-		plateau.affiche();
-		
-		blanc.placerPierre(3, 3);
-		System.out.println("\n \n \n");
-		plateau.affiche();
 		
 		
-		Plateau.jeu[2][3].detecterVoisin();
-		System.out.println(Plateau.jeu[2][3].haut);
-		Pierre pierre = new Pierre ();
-		pierre.setPosX(10);
-		pierre.setPosY(7);
-		pierre.setCouleur("Blanc");
-		 try {
-	           
-	           Serialisation.encodeToFile(pierre, "sauvegarde.xml");
-	           System.out.println(pierre);
-	            
-	            pierre = (Pierre) Serialisation.decodeFromFile("sauvegarde.xml");
-	            System.out.println(pierre);
-	         
-	        } catch(Exception e) {
-	            e.printStackTrace();
-	        }
+		Scanner sc = new Scanner (System.in);
+		System.out.println("Pseudo joueur blanc : ");
+		
+		Joueur blanc = new Joueur("Blanc", plateau, sc.nextLine());
+		
+		System.out.println(blanc.getPseudo());
+		
+		System.out.println("Pseudo joueur noir : ");
+		
+		Joueur noir = new Joueur("Noir", plateau, sc.nextLine());
+		
+		System.out.println(noir.getPseudo());
+		
+		
+		
+		while (blanc.isPasserTour() && noir.isPasserTour()) {
+			
+			System.out.println("Joueur blanc voulez vous passez ? (o/n)");
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+		
 		
 		
 	}

@@ -1,4 +1,5 @@
 
+
 public class Pierre {
 	
 	private String couleur;  /* enumeration */ 
