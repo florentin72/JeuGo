@@ -1,12 +1,12 @@
-
+import enumeration.Couleur;
 
 public class Pierre {
 	
-	private String couleur;  /* enumeration */ 
+	private Couleur couleur;  /* enumeration */ 
 	private int posX;
 	private int posY;
 	 
-	 Pierre haut,bas,gauche,droite;
+	 //Pierre haut,bas,gauche,droite;
 	 
 	 
 	 public Pierre(){
@@ -25,33 +25,11 @@ public class Pierre {
 	}
 	
 	
-	void detecterVoisin () {
+	void detecterVoisin () { 
 		
-		this.haut = new Pierre ();
-		this.bas = new Pierre();
-		this.droite = new Pierre();
-		this.gauche = new Pierre ();
 		
-		if (getPosX() == 0) {
-			
-			haut = null;
-			
-		}
-		if (getPosY() == 0 ) {
-			
-			this.gauche = null;
-		}
-		if (getPosY() == Plateau.nbColonnes-1 )
-			
-		if (!Plateau.jeu[getPosX()][getPosY()].getCouleur().equals(" - ")) {
-
-			haut.setPosX(getPosX()-1); 
-			haut.setPosY(posY); 
-			haut.setCouleur(Plateau.jeu[getPosX()-1][getPosY()].getCouleur()) ;
 		
-		}
 		
-		 
 		
 	}
 
@@ -81,13 +59,13 @@ public class Pierre {
 
 
 
-	public String getCouleur() {
+	public Couleur getCouleur() {
 		return couleur;
 	}
 
 
 
-	public void setCouleur(String couleur) {
+	public void setCouleur(Couleur couleur) {
 		this.couleur = couleur;
 	}
 

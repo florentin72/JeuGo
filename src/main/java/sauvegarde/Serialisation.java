@@ -21,7 +21,7 @@ public final class Serialisation {
         // ouverture de l'encodeur vers le fichier
         XMLEncoder encoder = new XMLEncoder(new FileOutputStream(fileName));
         try {
-            // serialisation de l'objet
+            // serialisation de l'objet 
             encoder.writeObject(object);
             encoder.flush();
         } finally {

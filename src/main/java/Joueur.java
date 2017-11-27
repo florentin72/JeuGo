@@ -1,4 +1,5 @@
 
+import enumeration.Couleur;
 import exception.ExceptionPlacerPierre;
 
 // class des joueurs 
@@ -6,7 +7,7 @@ import exception.ExceptionPlacerPierre;
 public class Joueur {
 	
 	
-	 private String couleur;
+	 private Couleur couleur;
 	
 	 private int nbPierrreCapture;
 	 private int score;
@@ -16,10 +17,11 @@ public class Joueur {
 	 private String pseudo;
 	 
 	 
-	public Joueur(String c , Plateau p , String pseud){
+	public Joueur(Couleur c , Plateau p , String pseud){
 		this.pseudo = pseud;
 		
 		couleur = c;
+		passerTour = false ;
 	
 		setNbPierrreCapture(0);
 		setScore(0);
@@ -28,18 +30,18 @@ public class Joueur {
 	
 	void placerPierre(int x , int y ) throws ExceptionPlacerPierre {
 		if (x<= Plateau.nbLignes && y < Plateau.nbColonnes){
-			if (Plateau.jeu[x][y].getCouleur().equals(" - ")) {
+			if (Plateau.jeu[x][y].getCouleur().equals(Couleur.None)) {
 			
 			
-			if (couleur.equals("Blanc")) {
+			if (couleur == Couleur.Blanc) {
 				
-				Plateau.jeu[x][y].setCouleur(" B ");
+				Plateau.jeu[x][y].setCouleur(Couleur.Blanc);
 				
 			}
 			
-			if (couleur.equals("Noir")) {
+			if (couleur == Couleur.Noir) {
 				
-				Plateau.jeu[x][y].setCouleur(" N ");
+				Plateau.jeu[x][y].setCouleur(Couleur.Noir);
 				
 			}
 			

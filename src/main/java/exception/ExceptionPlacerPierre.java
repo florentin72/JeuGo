@@ -19,3 +19,4 @@ public ExceptionPlacerPierre (int a ){
 		
 	}
 }
+ 
