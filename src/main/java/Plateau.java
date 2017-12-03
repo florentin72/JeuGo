@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+
+
 import enumeration.Couleur;
+
 
 public class Plateau {
 
@@ -6,6 +10,8 @@ public class Plateau {
 	static int nbLignes; 
 	static int nbColonnes; 
 	static Pierre  [][]  jeu ;
+	static ArrayList<Pierre> listPierre = new ArrayList <Pierre>  (); 
+	
 	
 	public Plateau (int n , int p){
 		int i,j;
@@ -60,4 +66,23 @@ public class Plateau {
 		
 		
 	}
+	
+	
+	void suppressionPierre () {
+		
+		for (Pierre p : this.listPierre) {
+			
+			
+			p.detecterVoisin();
+			System.out.println(p);
+			
+			
+			
+		}
+		
+		
+		
+	}
+	
+	
 }

@@ -1,7 +1,5 @@
 package enumeration;
 
 public enum Couleur {
-	
-	Blanc,Noir,None;
-
+Blanc,Noir,None;
 }

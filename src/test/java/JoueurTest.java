@@ -1,6 +1,8 @@
 
 import org.junit.Test;
 
+import enumeration.Couleur;
+
 import static org.junit.Assert.*;
 
 import exception.ExceptionPlacerPierre;
@@ -16,7 +18,7 @@ public class JoueurTest {
 	public void testPlacerPierre() {
 
 		Plateau p = new Plateau(10, 10);
-		Joueur blanc = new Joueur("Blanc", p, "Flo");
+		Joueur blanc = new Joueur(Couleur.Blanc, p, "Flo");
 		try {
 			blanc.placerPierre(19, 19);
 			fail("manque exception");

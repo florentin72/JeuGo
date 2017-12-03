@@ -1,4 +1,5 @@
 
+
 import enumeration.Couleur;
 import exception.ExceptionPlacerPierre;
 
@@ -36,12 +37,14 @@ public class Joueur {
 			if (couleur == Couleur.Blanc) {
 				
 				Plateau.jeu[x][y].setCouleur(Couleur.Blanc);
+				Plateau.listPierre.add(Plateau.jeu[x][y]);
 				
 			}
 			
 			if (couleur == Couleur.Noir) {
 				
 				Plateau.jeu[x][y].setCouleur(Couleur.Noir);
+				Plateau.listPierre.add(Plateau.jeu[x][y]);
 				
 			}
 			
@@ -52,6 +55,8 @@ public class Joueur {
 		else {
 			//System.out.println("Place deja prise ");
 			throw new ExceptionPlacerPierre (41);
+			
+			
 		}
 		
 		}
@@ -65,6 +70,10 @@ public class Joueur {
 
 		
 	}
+	
+	
+	
+	
 
 	
 	void passerTour () {

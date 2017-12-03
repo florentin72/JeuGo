@@ -1,32 +1,31 @@
 package interfaceGraphique;
 
-import java.awt.Image;
 
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
+import java.io.IOException;
+import java.net.URL;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
-public class Fenetre extends JFrame {
-
-	
-	public Fenetre() {
-			this.setTitle("Jeu de Go");
-		    this.setSize(600, 600);
-		    this.setLocationRelativeTo(null);
-		    this.setResizable(false);
-		    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
-		    this.setContentPane(new Panel(new ImageIcon("plateau.png").getImage()));
-		    this.setVisible(true);
-		 
+public class Fenetre extends Application {
+	@Override
+	public void start(Stage primaryStage) throws IOException {
+		final URL fxmlURL  = getClass().getResource("Interface.fxml"); 
+		final FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL); 
+		final Node node = fxmlLoader.load(); 
+		final VBox root = new VBox(node); 
+		final Scene scene = new Scene(root, 300, 250); 
+		primaryStage.setTitle("Jeu de Go "); 
+		primaryStage.setScene(scene); 
+		primaryStage.show();
 	}
-	 
 	
 	public static void main(String[] args) {
-		
-		
-		
-		Fenetre fen = new Fenetre ();
-	
-		  
+		launch(args);
 	}
-
 }
+
+

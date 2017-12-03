@@ -5,13 +5,13 @@ public class Pierre {
 	private Couleur couleur;  /* enumeration */ 
 	private int posX;
 	private int posY;
-	 
+	private int degreLib; 
 	 //Pierre haut,bas,gauche,droite;
 	 
 	 
 	 public Pierre(){
 		 
-		
+		degreLib =4;
 		 
 		 
 	 }
@@ -27,7 +27,26 @@ public class Pierre {
 	
 	void detecterVoisin () { 
 		
+		Couleur ennemi; 
+		if (this.couleur == Couleur.Blanc) {
+			
+			ennemi = Couleur.Noir;
+		}
 		
+		if (this.couleur == Couleur.Noir) {
+			
+			ennemi = Couleur.Blanc;
+			
+		}
+		else {
+			
+			ennemi = null;
+		}
+		
+		if ((Plateau.jeu[posX-1][posY].couleur == ennemi || posX==0) && (Plateau.jeu[posX+1][posY].couleur == ennemi || posX == Plateau.nbLignes) && (Plateau.jeu[posX][posY-1].couleur == ennemi || posY == 0) && (Plateau.jeu[posX][posY+1].couleur == ennemi || posY == Plateau.nbColonnes)) {
+			this.couleur = Couleur.None;
+			
+		}
 		
 		
 		
