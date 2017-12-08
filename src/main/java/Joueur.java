@@ -1,5 +1,7 @@
 
 
+import org.apache.log4j.Logger;
+
 import enumeration.Couleur;
 import exception.ExceptionPlacerPierre;
 
@@ -7,7 +9,7 @@ import exception.ExceptionPlacerPierre;
 
 public class Joueur {
 	
-	
+	final Logger logger = Logger.getLogger(Main.class.getName());
 	 private Couleur couleur;
 	
 	 private int nbPierrreCapture;
@@ -63,8 +65,9 @@ public class Joueur {
 		else {
 			
 			
-			throw new ExceptionPlacerPierre ();
-			//System.out.println("Coordonnees hors du plateau");
+			//throw new ExceptionPlacerPierre ();
+			System.out.println("Coordonnees hors du plateau");
+			logger.fatal("T'es hors du plateau ",  new ExceptionPlacerPierre());
 		}
 		
 

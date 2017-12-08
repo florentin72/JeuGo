@@ -1,0 +1,30 @@
+2017-12-08 16:55:13 WARN  Main:28 - Log warning
+2017-12-08 16:55:13 INFO  Main:29 - Message info
+2017-12-08 16:55:41 WARN  Main:28 - Log warning
+2017-12-08 16:55:41 INFO  Main:29 - Message info
+2017-12-08 16:58:26 WARN  Main:28 - Log warning
+2017-12-08 16:58:26 INFO  Main:29 - Message info
+2017-12-08 16:58:26 DEBUG Main:30 - Message de debug
+2017-12-08 16:59:09 WARN  Main:28 - Log warning
+2017-12-08 16:59:09 INFO  Main:29 - Message info
+2017-12-08 16:59:09 DEBUG Main:30 - Message de debug
+2017-12-08 16:59:09 ERROR Main:31 - Message d'erreur
+2017-12-08 17:01:30 WARN  Main:28 - Log warning
+2017-12-08 17:01:30 INFO  Main:29 - Message info
+2017-12-08 17:01:30 DEBUG Main:30 - Message de debug
+2017-12-08 17:01:30 ERROR Main:31 - Message d'erreur
+2017-12-08 17:01:30 FATAL Main:32 - Mesage fatal
+2017-12-08 17:08:14 WARN  Main:28 - Log warning
+2017-12-08 17:08:14 INFO  Main:29 - Message info
+2017-12-08 17:08:14 DEBUG Main:30 - Message de debug
+2017-12-08 17:08:14 ERROR Main:31 - Message d'erreur
+2017-12-08 17:08:14 FATAL Main:32 - Mesage fatal
+2017-12-08 17:08:34 WARN  Main:28 - Log warning
+2017-12-08 17:08:34 INFO  Main:29 - Message info
+2017-12-08 17:08:34 DEBUG Main:30 - Message de debug
+2017-12-08 17:08:34 ERROR Main:31 - Message d'erreur
+2017-12-08 17:08:34 FATAL Main:32 - Mesage fatal
+2017-12-08 17:08:42 FATAL Main:70 - T'es hors du plateau 
+exception.ExceptionPlacerPierre
+	at Joueur.placerPierre(Joueur.java:70)
+	at Main.main(Main.java:106)

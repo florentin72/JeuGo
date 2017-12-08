@@ -1,9 +1,13 @@
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
+
 import java.io.InputStreamReader;
-import java.io.Reader;
+import java.util.ArrayList;
 import java.util.Scanner;
+
+
+
+import org.apache.log4j.Logger;
 
 import enumeration.Couleur;
 import exception.ExceptionPlacerPierre;
@@ -15,7 +19,48 @@ public class Main {
 		
 		Plateau plateau = new Plateau (10,10);
 		plateau.affiche();
+
+		final Logger logger = Logger.getLogger(Main.class.getName());
+		/*Logger logger = Logger.getLogger(Main.class.getName ());
+		logger.info (" Message de log au niveau info ");
+		logger.warning("Message warning");
+		logger.severe("Message severe ");*/
+		logger.warn("Log warning");
+		logger.info("Message info");
+		logger.debug("Message de debug");
+		logger.error("Message d'erreur");
+		logger.fatal("Mesage fatal");
+		logger.trace("Message trace");
+		/*Pierre p1 = new Pierre();
+		p1.setPosX(5);
+		Pierre p2 = new Pierre();
+		p2.setPosX(45);
+		Pierre p3 = new Pierre();
+		p3.setPosX(15);
+		Pierre p4 = new Pierre();
+		p4.setPosX(59);
 		
+		
+		ArrayList <Pierre> list = new ArrayList <Pierre>();
+		list.add(p1);
+		list.add(p2);
+		list.add(p4);
+		list.add(p3);
+		System.out.println("Avant trie");
+		for (Pierre p : list) {
+			
+			System.out.println(p);
+			
+		}
+		
+		list.sort(new ComparatorPierre());
+		System.out.println("apres trie");
+		for (Pierre p : list) {
+			
+			System.out.println(p);
+			
+		}
+		*/
 		
 		
 		System.out.println("Pseudo joueur blanc : ");
@@ -41,6 +86,10 @@ public class Main {
 			System.out.println("Tour numero : " +i);
 			
 			System.out.println("Joueur blanc voulez vous passez ? (o/n)");
+			
+			
+			
+			
 			
 			if (reader.readLine().equals("o")) {
 			

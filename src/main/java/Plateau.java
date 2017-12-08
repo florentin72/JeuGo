@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
 
 import enumeration.Couleur;
 
@@ -45,7 +46,7 @@ public class Plateau {
 				
 				if (jeu[i][j].getCouleur() == Couleur.None ) {
 					
-					affiche = " - ";
+					affiche = " + ";
 				}
 
 				if (jeu[i][j].getCouleur() == Couleur.Noir ) {
