@@ -21,10 +21,7 @@ public class Main {
 		plateau.affiche();
 
 		final Logger logger = Logger.getLogger(Main.class.getName());
-		/*Logger logger = Logger.getLogger(Main.class.getName ());
-		logger.info (" Message de log au niveau info ");
-		logger.warning("Message warning");
-		logger.severe("Message severe ");*/
+	
 		logger.warn("Log warning");
 		logger.info("Message info");
 		logger.debug("Message de debug");
@@ -60,8 +57,8 @@ public class Main {
 			System.out.println(p);
 			
 		}
-		*/
 		
+		*/
 		
 		System.out.println("Pseudo joueur blanc : ");
 		Scanner sc = new Scanner (System.in);
@@ -127,7 +124,9 @@ public class Main {
 				System.out.println("Coordonee y ? : ");
 				y = sc.nextInt();
 				noir.placerPierre(x, y);
+				
 				plateau.suppressionPierre();
+				
 				
 			}
 			

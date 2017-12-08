@@ -2,7 +2,7 @@
 
 import java.util.Comparator;
  
-public class ComparatorPierre implements Comparator<Pierre> {
+public class ComparatorPierre implements Comparator <Pierre> {
 
 	@Override
 	public int compare(Pierre pierre1, Pierre pierre2) {

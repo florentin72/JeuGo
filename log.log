@@ -28,3 +28,18 @@
 exception.ExceptionPlacerPierre
 	at Joueur.placerPierre(Joueur.java:70)
 	at Main.main(Main.java:106)
+2017-12-08 17:28:12 WARN  Main:28 - Log warning
+2017-12-08 17:28:12 INFO  Main:29 - Message info
+2017-12-08 17:28:12 DEBUG Main:30 - Message de debug
+2017-12-08 17:28:12 ERROR Main:31 - Message d'erreur
+2017-12-08 17:28:12 FATAL Main:32 - Mesage fatal
+2017-12-08 17:39:26 WARN  Main:25 - Log warning
+2017-12-08 17:39:26 INFO  Main:26 - Message info
+2017-12-08 17:39:26 DEBUG Main:27 - Message de debug
+2017-12-08 17:39:26 ERROR Main:28 - Message d'erreur
+2017-12-08 17:39:26 FATAL Main:29 - Mesage fatal
+2017-12-08 17:55:33 WARN  Main:25 - Log warning
+2017-12-08 17:55:33 INFO  Main:26 - Message info
+2017-12-08 17:55:33 DEBUG Main:27 - Message de debug
+2017-12-08 17:55:33 ERROR Main:28 - Message d'erreur
+2017-12-08 17:55:33 FATAL Main:29 - Mesage fatal
