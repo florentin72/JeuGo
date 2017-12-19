@@ -27,11 +27,17 @@ public class PlateauTest {
 		Joueur noir = new Joueur (Couleur.Noir,p,"JPpp");
 		
 		
-		blanc.placerPierre(0, 0);
-		noir.placerPierre(0,1);
-		noir.placerPierre(1, 0);
-		System.out.println( Plateau.jeu[0][0].getCouleur());
-		assertEquals("Erreur", Plateau.jeu[0][0].getCouleur(),Couleur.None );
+		blanc.placerPierre(5, 5);
+		
+		noir.placerPierre(4,5);
+		noir.placerPierre(6, 5);
+		noir.placerPierre(5, 4);
+		noir.placerPierre(5, 6);
+		p.suppressionPierre();
+
+		System.out.println( p.jeu[5][5].getCouleur());
+		
+		assertEquals("Erreur",Couleur.None, p.jeu[5][5].getCouleur() );
 		
 		
 	}

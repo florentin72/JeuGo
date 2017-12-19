@@ -27,7 +27,7 @@ public class Plateau {
 				jeu[i][j].setPosY(j);
 				 
 				jeu[i][j].setCouleur(Couleur.None);
-				
+				listPierre.add(jeu[i][j]);
 			}
 			
 		}
