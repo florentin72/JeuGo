@@ -60,6 +60,9 @@ public class Main {
 		
 		*/
 		
+	
+		
+		
 		System.out.println("Pseudo joueur blanc : ");
 		Scanner sc = new Scanner (System.in);
 		InputStreamReader stream = new InputStreamReader(System.in);
@@ -74,6 +77,15 @@ public class Main {
 		
 		System.out.println(noir.getPseudo());
 		
+		
+		blanc.placerPierre(5, 5);
+			
+			noir.placerPierre(4,5);
+			noir.placerPierre(6, 5);
+			noir.placerPierre(5, 4);
+			noir.placerPierre(5, 6);
+			
+			
 		int x,y;
 		int i = 1;
 		while (!blanc.isPasserTour() || !noir.isPasserTour()) {

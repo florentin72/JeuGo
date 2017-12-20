@@ -35,9 +35,9 @@ public class PlateauTest {
 		noir.placerPierre(5, 6);
 		p.suppressionPierre();
 
-		System.out.println( p.jeu[5][5].getCouleur());
+		System.out.println( Plateau.jeu[5][5].getCouleur());
 		
-		assertEquals("Erreur",Couleur.None, p.jeu[5][5].getCouleur() );
+		assertEquals("Erreur",Couleur.None, Plateau.jeu[5][5].getCouleur() );
 		
 		
 	}

@@ -34,7 +34,7 @@ public class Plateau {
 		
 	}
 	
-	void affiche () {
+	 void affiche () {
 		
 		
 		int i,j=0 ; 
@@ -69,13 +69,14 @@ public class Plateau {
 	}
 	
 	
-	void suppressionPierre () {
+	 void suppressionPierre () {
 		
-		for (Pierre p : this.listPierre) {
+		for (Pierre p : Plateau.listPierre) {
 			
 			
 			p.detecterVoisin();
 			System.out.println(p);
+			
 			
 			
 			

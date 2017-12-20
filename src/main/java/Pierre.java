@@ -27,19 +27,20 @@ public class Pierre {
 	
 	void detecterVoisin () { 
 		
+		System.out.println("entree ");
 		Couleur ennemi; 
-		if (this.couleur == Couleur.Blanc) {
-			
+		if (this.couleur ==  (Couleur.Blanc) ) {
+			System.out.println("NOIR ***********************************");
 			ennemi = Couleur.Noir;
 		}
 		
-		if (this.couleur == Couleur.Noir) {
+		if (this.couleur== (Couleur.Noir)) {
 			
 			ennemi = Couleur.Blanc;
-			
+			System.out.println("BLANC ***********************************");
 		}
 		else {
-			
+			System.out.println("si t'es la c'est pas bon");
 			ennemi = null;
 		}
 		
