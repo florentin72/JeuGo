@@ -9,9 +9,12 @@ public class Pierre {
 	 //Pierre haut,bas,gauche,droite;
 	 
 	 
-	 public Pierre(){
+	 public Pierre(int x , int y , Couleur c ){
 		 
-		degreLib =4;
+	
+		 posX = x ; 
+		 posY = y; 
+		 couleur = c ; 
 		 
 		 
 	 }
@@ -25,7 +28,7 @@ public class Pierre {
 	}
 	
 	
-	void detecterVoisin () { 
+/*	void detecterVoisin () { 
 		
 		Couleur ennemi; 
 		if (this.couleur == Couleur.Blanc) {
@@ -53,7 +56,7 @@ public class Pierre {
 		
 	}
 
-
+*/
 
 	public int getPosX() {
 		return posX;

@@ -19,7 +19,7 @@ public class Joueur {
 	 private int nbPrisonnier;
 	 private String pseudo;
 	 
-	 
+	
 	public Joueur(Couleur c , Plateau p , String pseud){
 		this.pseudo = pseud;
 		
@@ -33,48 +33,17 @@ public class Joueur {
 	
 	void placerPierre(int x , int y ) throws ExceptionPlacerPierre {
 		if (x<= Plateau.nbLignes && y < Plateau.nbColonnes){
-			if (Plateau.jeu[x][y].getCouleur().equals(Couleur.None)) {
-			
-			
-			if (couleur == Couleur.Blanc) {
-				
-				Plateau.jeu[x][y].setCouleur(Couleur.Blanc);
-				Plateau.listPierre.add(Plateau.jeu[x][y]);
-				
-			}
-			
-			if (couleur == Couleur.Noir) {
-				
-				Plateau.jeu[x][y].setCouleur(Couleur.Noir);
-				Plateau.listPierre.add(Plateau.jeu[x][y]);
-				
-			}
 			
 			
 			
-		}
-		
-		else {
-			//System.out.println("Place deja prise ");
-			throw new ExceptionPlacerPierre (41);
+			Plateau.listPierre.add(new Pierre(x,y,Couleur.Blanc) );	
 			
-			
-		}
-		
-		}
-		else {
-			
-			
-			//throw new ExceptionPlacerPierre ();
-			System.out.println("Coordonnees hors du plateau");
-			logger.fatal("T'es hors du plateau ",  new ExceptionPlacerPierre());
-		}
-		
+	
 
 		
 	}
 	
-	
+	}
 	
 	
 
