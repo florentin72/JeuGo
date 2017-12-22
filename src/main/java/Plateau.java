@@ -54,13 +54,14 @@ public class Plateau {
 	}
 	
 	
-	void suppressionPierre () {
+	 void suppressionPierre () {
 		
 		for (Pierre p : Plateau.listPierre) {
 			
 			
 		//	p.detecterVoisin();
 			System.out.println(p);
+			
 			
 			
 			
