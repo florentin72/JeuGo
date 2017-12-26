@@ -56,7 +56,7 @@ public class Plateau {
 	
 	 void suppressionPierre () {
 		
-		for (Pierre p : intersection) {
+		for (Pierre p : listPierre) {
 			
 			
 		//	p.detecterVoisin();
