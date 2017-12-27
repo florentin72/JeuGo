@@ -1,5 +1,9 @@
 import enumeration.Couleur;
 
+/**
+ * @author Florentin
+ * classe representants les pierres
+ */
 public class Pierre {
 	
 	private Couleur couleur;  /* enumeration */ 
@@ -8,7 +12,10 @@ public class Pierre {
 	private int degreLib; 
 	 //Pierre haut,bas,gauche,droite;
 	 
-	 
+	 /**
+	  * Constructeur qui iniatialise le nombre de degre de liberté d'une pierre a 4
+	  * 
+	  */
 	 public Pierre(){
 		 
 		degreLib =4;
@@ -17,14 +24,19 @@ public class Pierre {
 	 }
 	 
 	 
-	
+	/**
+	 * Methode toString
+	 */
 	public String toString () {
 		
 		return ("La pierre est en "+ getPosX() + ", " + getPosY() +" et est de couleur "+ getCouleur());
 		
 	}
 	
-	
+	/**
+	 * 
+	 * Methode pour detecter les voisins d'une pierre et la supprimer si elle est entouré 
+	 */
 	void detecterVoisin () { 
 		
 		Couleur ennemi = Couleur.None; 
@@ -44,14 +56,18 @@ public class Pierre {
 			this.couleur = Couleur.None;
 			System.out.println("pierre prise");
 			
+			
 		}
-		
-		
+	
 		
 	}
 
 
-
+/**
+ * 
+ * 
+ * getter et setters
+ */
 	public int getPosX() {
 		return posX;
 	}

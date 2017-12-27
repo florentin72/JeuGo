@@ -1,6 +1,4 @@
 package sauvegarde;
-
-
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.FileOutputStream;
@@ -8,6 +6,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * 
+ * @author Florentin
+ * Classe pour la serialisation
+ */
 public final class Serialisation {
 
     private Serialisation() {}

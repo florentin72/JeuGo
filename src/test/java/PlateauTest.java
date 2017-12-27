@@ -1,9 +1,12 @@
 import static org.junit.Assert.*;
-
 import org.junit.Test;
-
 import enumeration.Couleur;
 import exception.ExceptionPlacerPierre;
+/**
+ * 
+ * @author Florentin
+ * Classe de test pour le plateau
+ */
 
 public class PlateauTest {
 
@@ -18,14 +21,20 @@ public class PlateauTest {
 	}
 
 	@Test
+	/**
+	 * 
+	 * @throws ExceptionPlacerPierre
+	 *  Test de la suppression des pierres
+	 */
 	public void testSuppressionPierre() throws ExceptionPlacerPierre {
 		
 		Plateau p = new Plateau (10,10);
 		
 		
+		
 		Joueur blanc = new Joueur (Couleur.Blanc,p,"JP");
 		Joueur noir = new Joueur (Couleur.Noir,p,"JPpp");
-		
+		 
 		
 		blanc.placerPierre(0, 0);
 		noir.placerPierre(0,1);
@@ -44,5 +53,6 @@ public class PlateauTest {
 		assertEquals("Erreur", Plateau.jeu[0][0].getCouleur(),Couleur.None );
 		
 	}
+	
 
 }

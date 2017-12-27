@@ -4,7 +4,12 @@ import org.apache.log4j.Logger;
 
 import enumeration.Couleur;
 
-
+/**
+ * 
+ * 
+ * @author Florentin
+ * Classe representant le Plateau
+ */
 public class Plateau {
 
 	
@@ -13,7 +18,12 @@ public class Plateau {
 	static Pierre  [][]  jeu ;
 	static ArrayList<Pierre> listPierre = new ArrayList <Pierre>  (); 
 	
-	
+	/**
+	 * 
+	 * @param n
+	 * @param p
+	 * Constructeur du plateau avec la longueur et la largeur en parametre 
+	 */
 	public Plateau (int n , int p){
 		int i,j;
 		nbLignes = n;
@@ -33,7 +43,10 @@ public class Plateau {
 		}
 		
 	}
-	
+	/**
+	 * 
+	 * methode qui affiche le plateau
+	 */
 	void affiche () {
 		
 		
@@ -68,7 +81,10 @@ public class Plateau {
 		
 	}
 	
-	
+	/**
+	 * 
+	 * Methode qui supprime les pierres entouré dans du plateau
+	 */
 	void suppressionPierre () {
 		
 		int i,j;

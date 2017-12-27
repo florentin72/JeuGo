@@ -6,7 +6,11 @@ import enumeration.Couleur;
 import static org.junit.Assert.*;
 
 import exception.ExceptionPlacerPierre;
-
+/**
+ * 
+ * @author Florentin
+ * Test de la classe joueur
+ */
 public class JoueurTest {
 
 	@Test

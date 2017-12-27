@@ -1,20 +1,29 @@
 import java.io.BufferedReader;
 import java.io.IOException;
-
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Scanner;
-
-
-
 import org.apache.log4j.Logger;
-
 import enumeration.Couleur;
 import exception.ExceptionPlacerPierre;
-import sauvegarde.Serialisation;
+
+/**
+ * 
+ * 
+ * @author Florentin
+ * Classe principale contenant la methode main
+ */
 
 public class Main {
 
+	
+	/**
+	 * 
+	 * 
+	 * @param args
+	 * @throws ExceptionPlacerPierre
+	 * @throws IOException
+	 * Methode main
+	 */
 	public static void main (String args []) throws ExceptionPlacerPierre, IOException {
 		
 		Plateau plateau = new Plateau (10,10);
