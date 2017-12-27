@@ -71,12 +71,18 @@ public class Plateau {
 	
 	void suppressionPierre () {
 		
-		for (Pierre p : this.listPierre) {
+		int i,j;
+		for (i=0;i<nbLignes;i++) {
 			
+			for (j=0;j<nbColonnes;j++) {
+				
+				jeu[i][j].detecterVoisin();
+				System.out.println(jeu[i][j]);
+				
+				
+			}
 			
-			p.detecterVoisin();
-			System.out.println(p);
-			
+		
 			
 			
 		}

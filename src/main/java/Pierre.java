@@ -20,7 +20,7 @@ public class Pierre {
 	
 	public String toString () {
 		
-		return ("La pierre est en "+ getPosX() + ", " + getPosY());
+		return ("La pierre est en "+ getPosX() + ", " + getPosY() +" et est de couleur "+ getCouleur());
 		
 	}
 	
@@ -40,7 +40,7 @@ public class Pierre {
 		}
 		
 		
-		if (( posX==0 || Plateau.jeu[posX-1][posY].couleur == ennemi ) && (posX == Plateau.nbLignes || Plateau.jeu[posX+1][posY].couleur == ennemi  ) && (posY == 0 || Plateau.jeu[posX][posY-1].couleur == ennemi  ) && ( posY == Plateau.nbColonnes ||Plateau.jeu[posX][posY+1].couleur == ennemi )) {
+		if (( posX==0 || Plateau.jeu[posX-1][posY].couleur == ennemi ) && (posX == Plateau.nbLignes-1 || Plateau.jeu[posX+1][posY].couleur == ennemi  ) && (posY == 0 || Plateau.jeu[posX][posY-1].couleur == ennemi  ) && ( posY == Plateau.nbColonnes-1 ||Plateau.jeu[posX][posY+1].couleur == ennemi )) {
 			this.couleur = Couleur.None;
 			System.out.println("pierre prise");
 			
