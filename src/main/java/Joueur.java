@@ -55,7 +55,7 @@ public class Joueur {
 		}
 		
 		else {
-			//System.out.println("Place deja prise ");
+		
 			throw new ExceptionPlacerPierre (41);
 			
 			
@@ -65,9 +65,7 @@ public class Joueur {
 		else {
 			
 			
-			//throw new ExceptionPlacerPierre ();
-			System.out.println("Coordonnees hors du plateau");
-			logger.fatal("T'es hors du plateau ",  new ExceptionPlacerPierre());
+			throw new ExceptionPlacerPierre ();
 		}
 		
 
