@@ -27,7 +27,7 @@ public class Pierre {
 	
 	void detecterVoisin () { 
 		
-		Couleur ennemi; 
+		Couleur ennemi = Couleur.None; 
 		if (this.couleur == Couleur.Blanc) {
 			
 			ennemi = Couleur.Noir;
@@ -38,10 +38,7 @@ public class Pierre {
 			ennemi = Couleur.Blanc;
 			
 		}
-		else {
-			
-			ennemi = null;
-		}
+		
 		
 		if (( posX==0 || Plateau.jeu[posX-1][posY].couleur == ennemi ) && (posX == Plateau.nbLignes || Plateau.jeu[posX+1][posY].couleur == ennemi  ) && (posY == 0 || Plateau.jeu[posX][posY-1].couleur == ennemi  ) && ( posY == Plateau.nbColonnes ||Plateau.jeu[posX][posY+1].couleur == ennemi )) {
 			this.couleur = Couleur.None;
