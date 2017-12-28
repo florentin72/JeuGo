@@ -10,6 +10,7 @@ public class Pierre {
 	private int posX;
 	private int posY;
 	private int degreLib; 
+	private boolean isInGroupe;
 	 //Pierre haut,bas,gauche,droite;
 	 
 	 /**
@@ -19,7 +20,7 @@ public class Pierre {
 	 public Pierre(){
 		 
 		degreLib =4;
-		 
+		isInGroupe = false;
 		 
 	 }
 	 
@@ -61,7 +62,101 @@ public class Pierre {
 	
 		
 	}
+	/**
+	 * 
+	 * Calcul le nombre de degree de liberte d'une pierre
+	 */
+	
+	void calculDegreeLiberte() {
+		
+		if ( posX==0 || Plateau.jeu[posX-1][posY].couleur != Couleur.None ) {
+			
+			degreLib --;
+			
+		}
+		if (posX == Plateau.nbLignes-1 || Plateau.jeu[posX+1][posY].couleur != Couleur.None) {
+			
+			degreLib --;
+		}
+		if (posY == 0 || Plateau.jeu[posX][posY-1].couleur!= Couleur.None) {
+			
+			degreLib -- ;
+		}
+		
+		if (posY == Plateau.nbColonnes-1 ||Plateau.jeu[posX][posY+1].couleur != Couleur.None) {
+			
+			degreLib --;
+		}
+		
+	}
+	
+	/**
+	 * 
+	 * Methode pour reunir les pierres en groupes
+	 * 
+	 */
+	void formationGroupe () {
+		calculDegreeLiberte();
+	
+			GroupePierre groupe = new GroupePierre(getCouleur());
+		
+			if (!isInGroupe) {
+				 groupe.getListPierre().add(this);
+				 isInGroupe = true;
+				
+			
+			if (posX != 0) {
+				if ( Plateau.jeu[posX+1][posY].couleur == getCouleur()) {
+					groupe.getListPierre().add(Plateau.jeu[posX+1][posY]);
+					 Plateau.jeu[posX+1][posY].isInGroupe = true;
+				}
+			}
+			
+			if (posX != Plateau.nbLignes-1 ) {
+				if (Plateau.jeu[posX+1][posY].couleur == getCouleur()) {
+					groupe.getListPierre().add(Plateau.jeu[posX+1][posY]);
+					Plateau.jeu[posX+1][posY].isInGroupe = true;
+				}
+				
+				if (posY != 0 ) {
+					if (Plateau.jeu[posX][posY-1].couleur == getCouleur()) {
+						groupe.getListPierre().add(Plateau.jeu[posX][posY-1]);
+						Plateau.jeu[posX][posY-1].isInGroupe = true;
+						
+						
+					}
+					
+					
+				}
+				
+				if (posY != Plateau.nbColonnes-1) {
+					if (Plateau.jeu[posX][posY+1].couleur == getCouleur()) {
+						groupe.getListPierre().add(Plateau.jeu[posX][posY+1]);
+						Plateau.jeu[posX][posY+1].isInGroupe = true;
+						
+					}
+					
+				}
+			}
+			
+			Plateau.listGroupe.add(groupe);
+			}
+			
+			else {
+				
+				
+			}
+		
+		
+	
+		
+		
+		
+		
+	}
 
+
+	
 
 /**
  * 
@@ -104,7 +199,25 @@ public class Pierre {
 
 	
 	
-	
+	public int getDegreLib() {
+		return degreLib;
+	}
+
+
+	public void setDegreLib(int degreLib) {
+		this.degreLib = degreLib;
+	}
+
+
+	public boolean isInGroupe() {
+		return isInGroupe;
+	}
+
+
+	public void setInGroupe(boolean isInGroupe) {
+		this.isInGroupe = isInGroupe;
+	}
+
 	
 
 }

@@ -17,6 +17,7 @@ public class Plateau {
 	static int nbColonnes; 
 	static Pierre  [][]  jeu ;
 	static ArrayList<Pierre> listPierre = new ArrayList <Pierre>  (); 
+	static ArrayList<GroupePierre> listGroupe = new ArrayList <GroupePierre> ();
 	
 	/**
 	 * 

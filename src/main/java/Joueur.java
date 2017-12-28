@@ -15,10 +15,13 @@ public class Joueur {
 	final Logger logger = Logger.getLogger(Main.class.getName());
 	 private Couleur couleur;
 	
-	 private int nbPierrreCapture;
+	public void setCouleur(Couleur couleur) {
+		this.couleur = couleur;
+	}
+
+	private int nbPierrreCapture;
 	 private int score;
 	 private boolean passerTour;
-	 /* nombre de pierre capturer*/
 	 private int nbPrisonnier;
 	 private String pseudo;
 	 
@@ -56,14 +59,14 @@ public class Joueur {
 			if (couleur == Couleur.Blanc) {
 				
 				Plateau.jeu[x][y].setCouleur(Couleur.Blanc);
-				Plateau.listPierre.add(Plateau.jeu[x][y]);
+		
 				
 			}
 			
 			if (couleur == Couleur.Noir) {
 				
 				Plateau.jeu[x][y].setCouleur(Couleur.Noir);
-				Plateau.listPierre.add(Plateau.jeu[x][y]);
+			
 				
 			}
 			
@@ -144,5 +147,8 @@ public class Joueur {
 
 	public void setPseudo(String pseudo) {
 		this.pseudo = pseudo;
+	}
+	 public Couleur getCouleur() {
+			return couleur;
 	}
 }

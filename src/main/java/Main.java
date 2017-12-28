@@ -111,8 +111,7 @@ public class Main {
 				y =  sc.nextInt();
 				blanc.placerPierre(x, y);
 				plateau.suppressionPierre();
-				plateau.affiche();
-				
+				plateau.affiche();				
 				
 			}
 			
@@ -127,12 +126,17 @@ public class Main {
 			
 			
 			else {
-				
+				do {
 				System.out.println("Coordonee x ? : ");
 				x = sc.nextInt();
+				}while(x<0 ||  x> plateau.nbLignes);
+				
+				do {
 				System.out.println("Coordonee y ? : ");
 				y = sc.nextInt();
-				noir.placerPierre(x, y);
+				}while(y<0 ||  y>plateau.nbColonnes);
+				
+					noir.placerPierre(x, y);
 				
 				plateau.suppressionPierre();
 				
@@ -148,4 +152,7 @@ public class Main {
 		
 		
 	}
+	
+	
+	
 }
