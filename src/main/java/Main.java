@@ -112,7 +112,8 @@ public class Main {
 				blanc.placerPierre(x, y);
 				plateau.suppressionPierre();
 				plateau.affiche();				
-				
+				System.out.println(Plateau.listGroupe.size());
+				System.out.println(Plateau.listGroupe.get(0).getListPierre().size());
 			}
 			
 			System.out.println("Joueur noir voulez vous passez ? (o/n)");
@@ -129,12 +130,13 @@ public class Main {
 				do {
 				System.out.println("Coordonee x ? : ");
 				x = sc.nextInt();
-				}while(x<0 ||  x> plateau.nbLignes);
+				System.out.println("x = ");
+				}while(x<0 ||  x> Plateau.nbLignes);
 				
 				do {
 				System.out.println("Coordonee y ? : ");
 				y = sc.nextInt();
-				}while(y<0 ||  y>plateau.nbColonnes);
+				}while(y<0 ||  y>Plateau.nbColonnes);
 				
 					noir.placerPierre(x, y);
 				

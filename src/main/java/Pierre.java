@@ -97,10 +97,11 @@ public class Pierre {
 	 */
 	void formationGroupe () {
 		calculDegreeLiberte();
-	
+		System.out.println("le nombre de degre de liberte : " + degreLib);
 			GroupePierre groupe = new GroupePierre(getCouleur());
 		
 			if (!isInGroupe) {
+				
 				 groupe.getListPierre().add(this);
 				 isInGroupe = true;
 				
@@ -143,6 +144,8 @@ public class Pierre {
 			}
 			
 			else {
+				System.out.println("je usi sla ");
+				System.out.println(Plateau.listGroupe.indexOf(Plateau.jeu[posX][posY]));
 				
 				
 			}

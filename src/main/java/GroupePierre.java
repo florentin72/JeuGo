@@ -6,15 +6,38 @@ public class GroupePierre {
 	
 	private Couleur couleur ;
 	private ArrayList<Pierre> listPierre = new ArrayList<Pierre>(); 
-	private boolean libre;
-	private ArrayList<Pierre> listGroupe; 
+	private boolean prisonnier;
+
 	
 	
 	GroupePierre (Couleur c ){
 		
-		libre = true; 
+		prisonnier = false; 
 		couleur = c ;
 		}
+	
+	
+	
+	
+	public void testCaptureGroupe () {
+		
+		int i =0;
+		for (Pierre p : listPierre) {
+			p.calculDegreeLiberte();
+			
+			if (p.getDegreLib() != 0) {
+				
+				i++;
+				
+			}
+			
+		}
+		
+		if (i == 0) {
+			
+			prisonnier = true ;
+		}
+	}
 	
 	
 	
@@ -31,20 +54,14 @@ public class GroupePierre {
 		this.couleur = couleur;
 	}
 
-	public ArrayList<Pierre> getListGroupe() {
-		return listGroupe;
-	}
 
-	public void setListGroupe(ArrayList<Pierre> listGroupe) {
-		this.listGroupe = listGroupe;
-	}
 
 	public boolean isLibre() {
-		return libre;
+		return prisonnier;
 	}
 
-	public void setLibre(boolean libre) {
-		this.libre = libre;
+	public void setLibre(boolean prisonnier) {
+		this.prisonnier = prisonnier;
 	}
 
 
