@@ -8,7 +8,7 @@ import exception.ExceptionPlacerPierre;
 /**
  * 
  * @author Florentin
- * Classe representnt les joueurs
+ * Classe representant les joueurs
  */
 public class Joueur {
 	
@@ -59,14 +59,14 @@ public class Joueur {
 			if (couleur == Couleur.Blanc) {
 				
 				Plateau.jeu[x][y].setCouleur(Couleur.Blanc);
-				Plateau.jeu[x][y].formationGroupe();
+				//Plateau.jeu[x][y].formationGroupe();
 				
 			}
 			
 			if (couleur == Couleur.Noir) {
 				
 				Plateau.jeu[x][y].setCouleur(Couleur.Noir);
-				Plateau.jeu[x][y].formationGroupe();
+				//Plateau.jeu[x][y].formationGroupe();
 				
 			}
 			

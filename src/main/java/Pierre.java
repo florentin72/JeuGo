@@ -95,7 +95,7 @@ public class Pierre {
 	 * Methode pour reunir les pierres en groupes
 	 * 
 	 */
-	void formationGroupe () {
+	/*void formationGroupe () {
 		calculDegreeLiberte();
 		System.out.println("le nombre de degre de liberte : " + degreLib);
 			GroupePierre groupe = new GroupePierre(getCouleur());
@@ -156,7 +156,7 @@ public class Pierre {
 		
 		
 		
-	}
+	}*/
 
 
 	

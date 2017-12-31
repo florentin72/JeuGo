@@ -31,12 +31,13 @@ public class Main {
 
 		final Logger logger = Logger.getLogger(Main.class.getName());
 	
-		logger.warn("Log warning");
-		logger.info("Message info");
-		logger.debug("Message de debug");
-		logger.error("Message d'erreur");
-		logger.fatal("Mesage fatal");
-		logger.trace("Message trace");
+		
+		logger.info("Lancement du jeu ");
+		
+		
+		
+		
+		// test des exercices de tp 
 		/*Pierre p1 = new Pierre();
 		p1.setPosX(5);
 		Pierre p2 = new Pierre();
@@ -151,7 +152,7 @@ public class Main {
 		
 		System.out.println("Partie terminer ");
 		
-		
+		logger.info("Fin  ");
 		
 	}
 	
